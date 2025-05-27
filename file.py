@@ -16,4 +16,9 @@ def save_session(driver):
         "} return ls" 
     )
 
-    with open
+    with open(session_file, 'w') as f:
+        json.dump({'cookies':cookies, 'localStorage':local_storage}, f)
+        print('Session Saved')
+
+def load_session(driver):
+    ...
